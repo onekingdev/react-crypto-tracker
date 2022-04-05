@@ -22,21 +22,11 @@ import { CryptoState } from "../CryptoContext";
 import { numberWithCommas } from "./Bannner/Caurosel";
 
 const CoinsTable = () => {
-  const [coins, setCoins] = useState([]);
-  const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
-  const { currency, symbol } = CryptoState();
+
+  const { symbol, coins, loading } = CryptoState();
   const navigate = useNavigate();
-  const fetchCoins = async () => {
-    setLoading(true);
-    const { data } = await axios.get(CoinList(currency));
-    setCoins(data);
-    setLoading(false);
-  };
-  useEffect(() => {
-    fetchCoins();
-  }, []);
   const darkTheme = createTheme({
     palette: {
       primary: {
