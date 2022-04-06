@@ -8,10 +8,11 @@ A website to see crypto currency prices and charts, also explore top trending cr
   <li>Search any crypto currency</li>
   <li>Get details of crypto currency such as Its usage, multiple time frame chart</li>
   <li>Watchlist to track your favorite crypto currency movement</li>
+  <li>Sign with google account or with email address</li>
   </ul>
 
 # Demo 
-Here is a working live demo : https://crypto-hunter.netlify.app/
+Here is a working live demo : https://stirring-toffee-e190a3.netlify.app/
 
 # Built with
 <ul>
