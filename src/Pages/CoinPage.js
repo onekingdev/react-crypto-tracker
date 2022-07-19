@@ -10,7 +10,6 @@ import {
   Button,
 } from "@material-ui/core";
 import CoinInfo from "../Components/CoinInfo";
-import ReactHtmlParser from "react-html-parser";
 import { numberWithCommas } from "../Components/Bannner/Caurosel";
 import { doc, setDoc } from "@firebase/firestore";
 import { db } from "../firebase";
@@ -161,8 +160,7 @@ const CoinPage = () => {
         <Typography variant="h3" className={classes.heading}>
           {coin?.name}
         </Typography>
-        <Typography variant="subtitle2" className={classes.description}>
-          {ReactHtmlParser(coin?.description.en.split(". ")[0])}.
+        <Typography variant="subtitle2" className={classes.description} dangerouslySetInnerHTML={{ __html: coin?.description.en.split(". ")[0]}}>
         </Typography>
         <div className={classes.marketData}>
           <span style={{ display: "flex" }}>
